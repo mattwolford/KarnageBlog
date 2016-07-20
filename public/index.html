@@ -34,21 +34,28 @@
               <span class="label label-info">{{ posts.length }}</span>
             </h1>
         </div>
-
-        <!-- TODO LIST -->
-        <div id="blogpsot-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+        <div class="row">
+            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-4">.col-md-4
+                    <!-- TODO LIST -->
+                <div id="blogpsot-list">
+            
 
                 <!-- LOOP OVER THE TODOS IN $scope.todos -->
-                <div class="checkbox" ng-repeat="i in posts">
-                    <label>
-                      <input type="checkbox" ng-click="deleteBlogPost(i._id)" > {{ i.title }} by {{i.username }} @ {{i.date }}<br>
-                      {{ i.body }}
-                    </label>
-                </div>
+                    <div class="checkbox" ng-repeat="i in posts">
+                        
+                        <h3><input type="checkbox" ng-click="deleteBlogPost(i._id)" >
+                         {{ i.title }} <br> by {{i.username }} 
+                         <!-- @ {{i.date }} -->
+                        </h3>
+                     </div>
 
+                </div>
             </div>
         </div>
+
+        
+        
 
         <!-- FORM TO CREATE TODOS -->
         <div id="todo-form" class="row">
