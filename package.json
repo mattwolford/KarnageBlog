@@ -1,0 +1,14 @@
+{
+  "name"         : "karnage_blog",
+  "version"      : "0.0.0",
+  "description"  : "Simple blog app.",
+  "main"         : "server.js",
+  "author"       : "Matt",
+  "dependencies" : {
+    "body-parser"    : "*",
+    "express"        : "*",
+    "method-override": "*",
+    "mongoose"       : "*",
+    "morgan"         : "*"
+  }
+}
