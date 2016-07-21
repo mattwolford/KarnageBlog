@@ -10,38 +10,60 @@
 
     <title>My Blog App</title>
 
-    <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><!-- load bootstrap -->
     <style>
         html { overflow-y:scroll; }
         body { padding-top:50px; }
         #todo-list { margin-bottom:30px; }
     </style>
 
-    <!-- SPELLS -->
+    <!-- JavaScript -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
     <script src="core.js"></script>
 
 </head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<!-- SET THE CONTROLLER AND GET ALL POSTS -->
 <body ng-controller="mainController">
     <div class="container">
 
-        <!-- HEADER AND TODO COUNT -->
+        <!-- HEADER AND POST COUNT -->
         <div class="jumbotron text-center">
             <h1>I'm a Blog-a-holic
               <span class="label label-info">{{ posts.length }}</span>
             </h1>
-        </div>
+        </div> 
+
+
         <div class="row">
-            <div class="col-md-8">.col-md-8</div>
+            <div class="col-md-8">
+                
+            <h2>Sandwiches</h2>
+
+            <p>By Matt
+
+            On tuesday its turkey day!!</p>
+
+           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in neque et elit lacinia lobortis eget quis lacus. Suspendisse potenti. Praesent finibus, libero nec aliquam venenatis, nisl eros gravida nisl, vitae luctus dui dolor et diam. Cras non molestie nunc. Vestibulum vitae augue elit. Curabitur interdum faucibus arcu, nec cursus risus pellentesque a. Donec interdum eget dui eu varius. Praesent iaculis aliquam nisl, et gravida libero mattis eu. Nulla molestie viverra venenatis. Integer porta eleifend feugiat. Nulla facilisi. Sed hendrerit mauris justo, porttitor dapibus tortor laoreet sed. Pellentesque id justo eleifend, ultricies eros eget, blandit mauris.</div> 
+
+
+
+
+
+
+
+
+
+
+            </div>
+        
             <div class="col-md-4">.col-md-4
-                    <!-- TODO LIST -->
+                    <!-- POST LIST -->
                 <div id="blogpsot-list">
             
 
-                <!-- LOOP OVER THE TODOS IN $scope.todos -->
+                <!-- LOOP OVER THE POSTS IN $scope.posts -->
                     <div class="checkbox" ng-repeat="i in posts">
                         
                         <h3><input type="checkbox" ng-click="deleteBlogPost(i._id)" >
@@ -57,7 +79,7 @@
         
         
 
-        <!-- FORM TO CREATE TODOS -->
+        <!-- FORM TO CREATE POSTS -->
         <div id="todo-form" class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>

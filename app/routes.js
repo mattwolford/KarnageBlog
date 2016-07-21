@@ -7,8 +7,9 @@ module.exports = function(app) {
   // get all posts
   app.get('/api/posts', function(req, res) {
 
-      // use mongoose to get all posts in the database
-      BlogPost.find(function(err, posts) {
+      // use mongoose to get all posts in the database 
+      //http://stackoverflow.com/questions/5825520/in-mongoose-how-do-i-sort-by-date-node-js#answer-15081087
+      BlogPost.find().sort({date: 'descending'}).exec(function(err, posts) {
 
           // if there is an error retrieving, send the error.
           // nothing after res.send(err) will execute
